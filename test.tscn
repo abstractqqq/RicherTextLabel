@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://test.gd" type="Script" id=1]
+
+[node name="Node2D" type="RichTextLabel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+bbcode_enabled = true
+bbcode_text = "
+
+
+[center][url=1%0000ff][color=#ffffff]Hello[/color][/url][/center] Do you want to know how to make your [url=2%ffff00][color=#ffffff]rich[/color][/url] text label even more [url=3%40e0d0][color=#ffffff]colorful[/color][/url]?"
+meta_underlined = false
+text = "
+
+
+Hello Do you want to know how to make your rich text label even more colorful?"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="meta_clicked" from="." to="." method="_on_Node2D_meta_clicked"]
+[connection signal="meta_hover_ended" from="." to="." method="_on_Node2D_meta_hover_ended"]
+[connection signal="meta_hover_started" from="." to="." method="_on_Node2D_meta_hover_started"]
